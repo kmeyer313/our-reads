@@ -3,6 +3,8 @@ class Student < ActiveRecord::Base
   has_many    :comments, foreign_key: "commentor_id"
   has_many    :recommended_books, through: :recommendations, source: :book
 
+  validates   :name, presence: true
   validates   :username, presence: true, uniqueness: true
   validates   :email, presence: true, uniqueness: true, format: { with: /[@.]/ }
 end
+
