@@ -73,7 +73,6 @@ namespace :generate do
     File.open(path, 'w+') do |f|
       f.write(<<-EOF.strip_heredoc)
         require 'spec_helper'
-
         describe #{name} do
           pending "add some examples to (or delete) #{__FILE__}"
         end
