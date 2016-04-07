@@ -1,9 +1,8 @@
 class Recommendation < ActiveRecord::Base
-  belongs_to   :student, foreign_key: "recommendor_id"
+  belongs_to   :recommendor, class_name: "Student"
   belongs_to   :book
   has_many     :comments
 
+  validates :title, :content, :rating, :recommendor, :book, presence: true
 
-  validates   :title, presence: true
-  validates   :initial_bid, presence: true
 end
