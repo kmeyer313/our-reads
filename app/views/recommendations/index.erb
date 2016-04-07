@@ -1,0 +1,34 @@
+<!-- if logged_in? -->
+
+<h2><a href="/recommendations/new">Write a new recommendation!</a></h2>
+
+<!-- end -->
+
+<h1>Highly Recommended Books</h1> <!-- Should link to page that has list of all books ordered by most amount of recommendations -->
+<!-- need to create method to sort them by most recommendations -->
+<!-- also create a method to limit how many will be shown -->
+
+<% @books.each do |book| %>
+    <section>
+      <!-- <img> Image of book -->
+      <h3><em><%= book.title %></em> by <%= book.author %></h3> <!-- link to book's show page -->
+      <!-- average rating? write method -->
+      <p>This book has been recommended by: (list of students who recommended this book)<!-- need a method to get recommendors of a book, create association --></p>
+    </section>
+  <% end %>
+
+
+
+<h1>Recent Recommendations</h1> <!-- Should link to page that has list of recommendations listed by most recent -->
+  <% @recommendations.each do |recommendation| %>
+    <section>
+      <!-- <img> Image of book -->
+      <h3><em><%= recommendation.book.title %></em> by <%= recommendation.book.author %></h3> <!-- link to book's show page -->
+      <p>Rating: <%= recommendation.rating %></p>
+      <h4><%= recommendation.title %></h4> <!-- link to recommendation's show page -->
+      <p><%= recommendation.content %></p>
+      <p>Recommended by: <%= recommendation.recommendor.username %></p>
+    </section>
+  <% end %>
+
+<!--  -->

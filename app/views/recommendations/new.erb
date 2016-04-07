@@ -1,0 +1,20 @@
+<h2>Write a new recommendation!</h2>
+
+<form action="/recommendations" method="post">
+  <label>Book Title</label>
+  <input type="text" name="book[title]"> <!-- API CALL/SEARCH FIELD?! -->
+  <label>Author</label>
+  <input type="text" name="book[author]"> <!-- API CALL/SEARCH FIELD?! -->
+  <input type="hidden" name="book[isbn]"> <!-- API CALL/SEARCH FIELD?! -->
+  <input type="hidden" name="book[image_url]"> <!-- API CALL/SEARCH FIELD?! -->
+  <input type="hidden" name="book[summary]"> <!-- API CALL/SEARCH FIELD?! -->
+
+  <label>Come up with a catchy title for your recommendation!</label>
+  <input type="text" name="new_rec[title]">
+  <label>Tell us a little bit about the book to hook our interest!</label>
+  <input type="text" name="new_rec[content]">
+  <label>Rate it!</label>
+  <input type="text" name="new_rec[title]"> <!-- diff input bar -->
+  <input type="submit" value="I recommend this book!">
+
+</form>
