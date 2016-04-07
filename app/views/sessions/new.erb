@@ -1,0 +1,17 @@
+<div>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<form method="post" action="/sessions">
+    <label for="username">Username</label>
+    <input name="student[username]" type="text" value="">
+
+    <label for="Password">Password</label>
+    <input name="student[password]" type="password" value="">
+
+    <input type="submit" value="Login" class="button">
+</form>
