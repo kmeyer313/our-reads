@@ -1,6 +1,5 @@
 ## READ -- see all recommendations
 get "/recommendations" do
-  @books = Book.all
   @recommendations = Recommendation.all
   erb :'recommendations/index'
 end
@@ -15,12 +14,30 @@ get "/recommendations/new" do
 end
 
 post "/recommendations" do
-
+  if logged_in?
+    @recommendation = Recommendation.new(params[:new_rec])
+    @book = Book.new(params[:book])
+    if @recommendation.save
+      redirect "/recommendations/#{@recommendation.id}"
+    else
+      if @recommendation.errors.full_messages
+        @errors = @recommendation.errors.full_messages
+      end
+      @errors
+      erb :'recommendations/new'
+    end
+  else
+    halt(404, erb(:'404'))
+  end
 end
 
-get "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey" do
+
   #params form what ever form this erb produced
-end
+
+
+
+# get "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=yourAPIKey" do
+# end
 
 # https://www.googleapis.com/books/v1/volumes?q=intitle
 

@@ -1,3 +1,10 @@
+<h2>Register New Student</h2>
+
+<div class="errors">
+  <%= erb :'_errors' %>
+</div>
+
+
 <form id="registration" action="/students" method="post">
   <label for="new_name">Name: </label>
   <input name="student[name]" type="text" value="">
@@ -9,7 +16,7 @@
   <input name="student[email]" type="text" value="">
 
   <label for="new_image">Image: </label>
-  <input name="student[profile_image]" type="text">
+  <input name="student[profile_image]" type="text" placeholder="optional">
 
   <label for="new_password">Password: </label>
   <input name="student[password]" type="password">
