@@ -1,0 +1,20 @@
+* {
+
+}
+
+#banner {
+  border-bottom: 3px solid black;
+}
+
+#container {
+  padding: 20px 50px;
+}
+
+
+#footer {
+
+}
+
+.errors {
+  color: red;
+}

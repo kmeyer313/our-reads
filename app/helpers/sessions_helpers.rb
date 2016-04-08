@@ -1,11 +1,11 @@
 helpers do
 
   def current_user
-    User.find(session[:user_id]) if logged_in?
+    Student.find(session[:student_id]) if logged_in?
   end
 
   def logged_in?
-    session[:user_id]
+    session[:student_id]
   end
 
   # def current_user
