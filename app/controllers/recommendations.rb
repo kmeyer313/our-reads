@@ -20,9 +20,8 @@ post "/recommendations" do
     if @recommendation.save
       redirect "/recommendations/#{@recommendation.id}"
     else
-      @errors = []
       if @recommendation.errors.full_messages
-        @errors << @recommendation.errors.full_messages
+        @errors = @recommendation.errors.full_messages
       end
       @errors
       erb :'recommendations/new'
