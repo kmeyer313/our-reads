@@ -1,4 +1,6 @@
 get "/" do
-  redirect "/recommendations"
+  @books = Book.all
+  @recommendations = Recommendation.all
+  erb :'index'
 end
 

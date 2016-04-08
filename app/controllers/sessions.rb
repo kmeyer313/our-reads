@@ -3,17 +3,17 @@ get "/sessions/new" do
 end
 
 post "/sessions" do
-  @errors = []
+  # @errors = []
   if @student = Student.find_by(username: params[:student][:username])
     if @student.authenticate(params[:student][:password])
       session[:student_id] = @student.id
       redirect "/students/#{@student.id}"
     else
-      @errors << "Invalid credentials"
+      @error = "Invalid credentials"
       erb :"/sessions/new"
     end
   else
-    @errors << "Invalid credentials"
+    @error = "Invalid credentials"
     erb :"/sessions/new"
   end
 end

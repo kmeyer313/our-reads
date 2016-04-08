@@ -1,8 +1,8 @@
-<div>
-  <% if @errors %>
-    <% @errors.each do |error| %>
-      <p><%= error %></p>
-    <% end %>
+<h2>Login to your account!</h2>
+
+<div class="errors">
+  <% if @error %>
+      <p><%= @error %></p>
   <% end %>
 </div>
 

@@ -7,11 +7,16 @@ post "/students" do
   if @student.save
     redirect "/sessions/new"
   else
+    @errors = @student.errors.full_messages
     erb :"students/new"
   end
 end
 
 get "/students/:id" do
-  @student = Student.find(params[:id])
-  erb :"students/show"
+  if logged_in?
+    @student = Student.find(params[:id])
+    erb :"students/show"
+  else
+    halt(404, erb(:'404'))
+  end
 end
