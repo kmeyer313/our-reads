@@ -22,7 +22,7 @@
   <h1>Recent Recommendations</h1> <!-- Should link to page that has list of recommendations listed by most recent -->
     <% @recommendations.each do |recommendation| %>
       <section class="home-recent-rec-book">
-        <!-- <img> Image of book -->
+        <img src="<%= recommendation.book.image_url %>">
         <h3><em><%= recommendation.book.title %></em> by <%= recommendation.book.author %></h3> <!-- link to book's show page -->
         <p>Rating: <%= recommendation.rating %></p>
         <h4><%= recommendation.title %></h4> <!-- link to recommendation's show page -->

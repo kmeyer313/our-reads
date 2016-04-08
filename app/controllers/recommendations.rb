@@ -15,10 +15,13 @@ end
 
 post "/recommendations" do
   if logged_in?
-    @recommendation = Recommendation.new(params[:new_rec])
-    @book = Book.new(params[:book])
+    @book = Book.new
+    @book.build_book(params[:book][:title])
+    @book.save
+    @recommendation = Recommendation.new(title: params[:title], content: params[:content], rating: params[:rating], recommendor: current_user, book: @book)
     if @recommendation.save
-      redirect "/recommendations/#{@recommendation.id}"
+      redirect "/recommendations"
+      # redirect "/recommendations/#{@recommendation.id}"
     else
       if @recommendation.errors.full_messages
         @errors = @recommendation.errors.full_messages
@@ -31,6 +34,11 @@ post "/recommendations" do
   end
 end
 
+# Next Steps
+# on form, take in book title
+# on submit of form, send params to sinatra route
+# in sinatra
+# build method that does the parsing and returning of info we want
 
   #params form what ever form this erb produced
 
@@ -64,9 +72,5 @@ end
 # response[items][0]['volumeInfo']['description'] # returns a string
 # response[items][0]['volumeInfo']['imageLinks']['smallThumbnail'] # returns a string
 
-# Next Steps
-# on form, take in book title
-# on submit of form, send params to sinatra route
-# in sinatra
-# build method that does the parsing and returning of info we want
+
 

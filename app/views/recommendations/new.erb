@@ -9,22 +9,24 @@
   <form id="new_book_rec" action="/recommendations" method="post">
     <label>Book Title</label>
     <input type="text" name="book[title]"><br> <!-- API CALL/SEARCH FIELD?! -->
-    <label>Author</label>
-    <input type="text" name="book[author]"><br> <!-- API CALL/SEARCH FIELD?! -->
-    <input type="hidden" name="book[isbn]"> <!-- API CALL/SEARCH FIELD?! -->
-    <input type="hidden" name="book[image_url]"> <!-- API CALL/SEARCH FIELD?! -->
-    <input type="hidden" name="book[summary]"> <!-- API CALL/SEARCH FIELD?! -->
+<!--     <label>Author</label>
+    <input type="text" name="book[author]"><br>
+    <input type="hidden" name="book[isbn]">
+    <input type="hidden" name="book[image_url]">
+    <input type="hidden" name="book[summary]">  -->
 
     <label>Come up with a catchy title for your recommendation!</label>
-    <input type="text" name="new_rec[title]"><br>
+    <input type="text" name="title"><br>
     <label>Tell us a little bit about the book to hook our interest!</label>
-    <input type="text" name="new_rec[content]"><br>
+    <input type="text" name="content"><br>
     <label>Rate it!</label>
-    <select name="new_rec[title]">
+    <input type="text" name="rating"><br>
+<!--     <select name="new_rec[title]">
       <option value="3">3</option>
       <option value="4">4</option>
       <option value="5">5</option>
-    </select><br>
+    </select><br> -->
+
     <input type="submit" value="I recommend this book!">
 
   </form>
