@@ -19,6 +19,6 @@ post "/sessions" do
 end
 
 get "/sessions/logout" do
-  session[:user_id] = nil
+  session[:student_id] = nil
   redirect '/'
 end

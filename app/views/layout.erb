@@ -20,8 +20,8 @@
   <h1>Our Reads</h1>
     <% if logged_in? %>
       <ul>
-        <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
-        <li><a href="/session/logout">Logout</a></li>
+        <li><a href="/students/<%= current_user.id %>"><%= current_user.username %></a></li>
+        <li><a href="/sessions/logout">Logout</a></li>
       </ul>
     <% else %>
       <ul>
