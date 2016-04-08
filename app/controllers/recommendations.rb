@@ -38,10 +38,18 @@ end
 #     }
 #   ]
 # });
-r = HTTP.get("https://www.googleapis.com/books/v1/volumes?q=harry+potter")
-response = JSON.parse(r.body) # we have a hash
-response[items][0]["id"] # return id string
-response[items][0]['volumeInfo']['title'] # returns a string
-response[items][0]['volumeInfo']['authors'] # returns an array
-response[items][0]['volumeInfo']['description'] # returns a string
-response[items][0]['volumeInfo']['imageLinks']['smallThumbnail'] # returns a string
+
+# r = HTTP.get("https://www.googleapis.com/books/v1/volumes?q=harry+potter")
+# response = JSON.parse(r.body) # we have a hash
+# response[items][0]["id"] # return id string
+# response[items][0]['volumeInfo']['title'] # returns a string
+# response[items][0]['volumeInfo']['authors'] # returns an array
+# response[items][0]['volumeInfo']['description'] # returns a string
+# response[items][0]['volumeInfo']['imageLinks']['smallThumbnail'] # returns a string
+
+# Next Steps
+# on form, take in book title
+# on submit of form, send params to sinatra route
+# in sinatra
+# build method that does the parsing and returning of info we want
+
