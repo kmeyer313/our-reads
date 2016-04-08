@@ -13,11 +13,13 @@
       <% if logged_in? %>
         <ul>
           <li><a href="/students/<%= current_user.id %>"><%= current_user.username %></a></li>
+          <li> | </li>
           <li><a href="/sessions/logout">Logout</a></li>
         </ul>
       <% else %>
         <ul>
           <li><a href="/sessions/new">Login</a></li>
+          <li> | </li>
           <li><a href="/students/new">Register</a></li>
         </ul>
       <% end %>
@@ -27,6 +29,6 @@
     <%= yield %>
   </div>
 
-  <footer id="footer"><h6></h6></footer>
+  <footer id="footer"><h4>Tay & Ty &#169 April 2016</h4></footer>
 </body>
 </html>

@@ -1,18 +1,86 @@
-* {
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+* {
+  font-family: "Comic Sans MS";
+}
+
+html {
+  height: 100%;
+  /*background-color: #32bb7d;*/
+  line-height: 1.4;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  color: #32bb7d;
+  text-decoration: none;
+}
+
+  a:hover {
+    color: #6ec7a5;
+    text-decoration: underline;
+  }
+
+input[type=text], input[type=password], textarea {
+  color: #05724f;
 }
 
 #banner {
-  border-bottom: 3px solid black;
+  background-color: #3366ff;
+  padding: 5px;
+  /*position: fixed;*/
+  width: 100%
 }
 
+  #banner h1 {
+    margin: 0;
+    /*display: inline-block;*/
+  }
+
+  #banner ul {
+    list-style-type: none;
+    /*margin: 0;*/
+    padding: 0 0 0 10px;
+  }
+
+  #banner li {
+    display: inline;
+  }
+
 #container {
+  border: 2px solid black;
+/*  position: relative;
+  margin-top: 50px;*/
   padding: 20px 50px;
+
 }
+
+.home-high-rec {
+  padding: 10px 20px 10px 20px;
+  background-color: #99b3ff;
+  border-radius: 10px;
+}
+
+.home-high-rec-each {
+  background-color: #e6ecff;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
 
 
 #footer {
-
+  margin: 2px solid blue;
+  text-align: center;
 }
 
 .errors {
