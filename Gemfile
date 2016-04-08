@@ -18,6 +18,7 @@ gem 'bcrypt'
 
 gem 'faker'
 gem 'bcrypt'
+gem 'http'
 
 group :test do
   gem 'shoulda-matchers'
