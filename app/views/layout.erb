@@ -14,8 +14,9 @@
 
   <script src="/js/jquery.js"></script>
   <script src="/js/application.js"></script>
-
   <title>Our Reads</title>
+</head>
+<body>
   <h1>Our Reads</h1>
     <% if logged_in? %>
       <ul>
@@ -28,8 +29,6 @@
         <li><a href="/students/new">Register</a></li>
       </ul>
     <% end %>
-</head>
-<body>
   <%= yield %>
 </body>
 </html>

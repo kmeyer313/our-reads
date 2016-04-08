@@ -9,16 +9,16 @@ post "/sessions" do
       session[:student_id] = @student.id
       redirect "/students/#{@student.id}"
     else
-      @errors << "Invaid credentials"
+      @errors << "Invalid credentials"
       erb :"/sessions/new"
     end
   else
-    @errors << "Invaid credentials"
+    @errors << "Invalid credentials"
     erb :"/sessions/new"
   end
 end
 
-get "/session/logout" do
+get "/sessions/logout" do
   session[:user_id] = nil
   redirect '/'
 end
