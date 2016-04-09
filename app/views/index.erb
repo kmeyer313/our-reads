@@ -27,6 +27,7 @@
         <p>Rating: <%= recommendation.rating %></p>
         <h4><%= recommendation.title %></h4> <!-- link to recommendation's show page -->
         <p><%= recommendation.content %></p>
+        <p><%= recommendation.book.summary %></p>
         <p>Recommended by: <%= recommendation.recommendor.username %></p>
       </section>
     <% end %>
