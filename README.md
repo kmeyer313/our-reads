@@ -1,2 +1,2 @@
-# our-reads
-book recommendation software for classrooms
+# Our Reads
+Our Reads is a  web application which allows students to recommend books to each other, fostering engagement and a love for reading. With further development, this app will also support student book discussions, allow teachers to upload their classroom libraries, and give classrooms a platform to share their classroom library book wish list. Originally built with Ruby, Sinatra and the Google Books API, it is currently being redeveloped with Rails. I will share the up-to-date application as soon as it is ready.
